@@ -5094,26 +5094,29 @@
         });
 
         const form = document.getElementById('wf-form-Email-Form');
-
         form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o redirecionamento padrão do formulário
-            
-            // Coleta os dados do formulário
+            event.preventDefault(); // Impede o comportamento padrão de recarregar ou redirecionar automaticamente
+        
             const formData = new FormData(form);
-            
-            // Envia o formulário em segundo plano
-            fetch('https://formspree.io/f/xwpeddyl', {
+        
+            // Envia os dados do formulário para o servidor
+            fetch('https://formspree.io/f/xwpeddyl', {  // Coloque a URL correta do seu backend
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redireciona para a página enviado.html após o sucesso
+                    window.location.href = "/enviado.html";
+                } else {
+                    // Exibe uma mensagem de erro ao usuário se o envio falhar
+                    document.querySelector('.w-form-fail').style.display = 'block';
                 }
-            }).catch(error => {
-                console.error("Erro ao enviar o formulário: ", error);
+            })
+            .catch(() => {
+                // Exibe uma mensagem de erro se houver uma falha no envio
+                document.querySelector('.w-form-fail').style.display = 'block';
             });
-            
-            // Redireciona para a página de carregamento imediatamente
-            window.location.href = "/loading.html";
         });
         
         

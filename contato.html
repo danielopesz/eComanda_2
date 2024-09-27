@@ -85,26 +85,30 @@
     <div class="subpage-header contact-1">
         <div class="container w-container">
             <div data-ix="fade-in-on-load" class="white-contact-form centered w-form">
-                <form id="wf-form-Email-Form" name="wf-form-Email-Form-4" method="post">
+                <form id="wf-form-Email-Form" name="wf-form-Email-Form" method="post" action="https://formspree.io/f/xwpeddyl">
                     <h1 class="form-title">Entre em contato</h1>
                     <h2 class="form-title subtitle">Tem alguma dúvida? Entre em contato agora!</h2>
-                    <label for="name-3" class="field-label">NOME:</label>
-                    <input class="field rounded w-input" maxlength="256" name="name-3" data-name="Name 3" placeholder="" type="text" id="name-3" required />
                     
-                    <label for="Email-4" class="field-label">E-MAIL:</label>
-                    <input class="field rounded w-input" maxlength="256" name="Email-4" data-name="Email 4" placeholder="" type="email" id="Email-4" required />
+                    <label for="name" class="field-label">NOME:</label>
+                    <input class="field rounded w-input" maxlength="256" name="name" placeholder="Digite seu nome" type="text" id="name" required />
                     
-                    <label for="Message-2" class="field-label">SUA mensagem:</label>
-                    <textarea id="Message-2" name="Message-2" maxlength="5000" data-name="Message 2" placeholder="" class="field rounded area w-input" required></textarea>
+                    <label for="email" class="field-label">E-MAIL:</label>
+                    <input class="field rounded w-input" maxlength="256" name="email" placeholder="Digite seu e-mail" type="email" id="email" required />
+                    
+                    <label for="message" class="field-label">SUA mensagem:</label>
+                    <textarea id="message" name="message" maxlength="5000" placeholder="Digite sua mensagem" class="field rounded area w-input" required></textarea>
                     
                     <input type="submit" class="button w-button" value="Enviar" />
                 </form>
+                
                 <p id="response-message" style="display: none;"></p>
-                <div class="success-message w-form-done">
-                    <p>Thank you! Your submission has been received!</p>
+                
+                <div class="success-message w-form-done" style="display:none;">
+                    <p>Obrigado! Sua mensagem foi recebida.</p>
                 </div>
-                <div class="error-bg w-form-fail">
-                    <p>Oops! Something went wrong while submitting the form</p>
+                
+                <div class="error-bg w-form-fail" style="display:none;">
+                    <p>Obrigado! Sua mensagem foi recebida.</p>
                 </div>
             </div>
         </div>
