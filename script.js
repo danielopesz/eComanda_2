@@ -5122,6 +5122,19 @@
       } catch (e) {
           console.warn("createBadge não está definido, erro ignorado.");
       }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector('seletor-do-formulario'); // Altere pelo seletor correto
+        if (form) { // Verifique se o formulário foi encontrado
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita o redirecionamento padrão do formulário
+                // Aqui vai o restante do código que lida com o submit
+            });
+        } else {
+            console.error("Formulário não encontrado.");
+        }
+    });
+    
       
           return api;
         });

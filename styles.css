@@ -5651,8 +5651,8 @@ html {
   .team-small-social-icon {
     height: 15px;
   }
-  
-  .image-block-right {
+
+  .image-block-top {
     background-image: url("https://cdn.prod.website-files.com/66f1713280025d615d9b39d4/66f1713280025d615d9b3b4d_Photo-5.jpg");
     background-position: 50%;
     background-size: cover;
@@ -5662,17 +5662,18 @@ html {
   }
   
   .text-column-left {
+    clear: right;
     padding-right: 40px;
   }
   
   .image-block {
-    background-image: url("https://cdn.prod.website-files.com/66f1713280025d615d9b39d4/66f1713280025d615d9b3b6d_Photo-7.jpg");
-    background-position: 50%;
+    background-image: url("https://cdn.prod.website-files.com/66f1713280025d615d9b39d4/66f702d236bebed07c89ee7c_happy-barista-adding-order-cash-register-while-working-pub.jpg");
+    background-position: 40% 40%;
     background-size: cover;
-    border-radius: 5px;
+    border-radius: 4px;
     width: 100%;
-    height: 240px;
-    position: relative;
+    height: 200px;
+    position: static;
     overflow: hidden;
   }
   

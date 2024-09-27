@@ -24,9 +24,52 @@
     <link href="https://cdn.prod.website-files.com/66f1713280025d615d9b39d4/66f30c7dfc8e5d0b37e5921b_icon_256x.png"
         rel="apple-touch-icon" />
     <script src="https://www.google.com/recaptcha/api.js" type="text/javascript"></script>
+    <title>WhatsApp Floating Button</title>
+    <style>
+        /* Estilos para o botão flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            cursor: pointer;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #1EBE55;
+        }
+
+        .whatsapp-float img {
+            width: 30px;
+            height: 30px;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Botão flutuante -->
+    <div class="whatsapp-float" onclick="redirectToWhatsApp()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+
+    <script>
+        function redirectToWhatsApp() {
+            // Número do WhatsApp com o qual o usuário será direcionado
+            const phoneNumber = "5532998512325"; // Substitua pelo seu número de WhatsApp
+            const message = "Quero essa solução para o meu negócio!";
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
     <div data-collapse="medium" data-animation="default" data-duration="400" data-no-scroll="1" data-easing="ease"
         data-easing2="ease" role="banner" class="navbar w-nav">
         <div class="w-container"><a href="/" class="logo-block w-nav-brand"><img
@@ -43,8 +86,8 @@
     </div>
     <div class="subpage-header about-5">
         <div class="container w-container">
-            <h2 data-ix="fade-in-on-load" class="subpage-title">Sem papel, sem dor de cabeça.</h2>
-            <div data-ix="fade-in-on-load-2" class="page-subtitle">O lema da eComanda é esse! Estamos focados em ajudar
+            <h2 class="subpage-title">Sem papel, sem dor de cabeça.</h2>
+            <div class="page-subtitle">O lema da eComanda é esse! Estamos focados em ajudar
                 negócios a gerenciar suas operações com mais facilidade e eficiência. Oferecemos soluções práticas que
                 eliminam gargalos e dores de cabeça na gestão de pedidos, estoque, cardápios e finanças. Com nossa
                 ferramenta tudo-em-um, simplificamos o dia a dia do seu negócio, permitindo que você tenha mais controle
@@ -52,15 +95,19 @@
                 class="button w-button">entre em contato</a>
         </div>
     </div>
-    <div class="section _2-column-pricing tint">
-        <div class="w-row">
-            <div class="w-clearfix w-col w-col-6">
-                <h1 class="heading">Nossa Missão</h1>
-            </div>
-            <div class="w-col w-col-6">
-                <h2 class="heading-2">Inovação e Simplicidade para a Gestão Eficiente de Negócios</h2>
-                <p>Facilitar a gestão de negócios, oferecendo soluções inovadoras que integram processos, otimizam
-                    operações e impulsionam o crescimento, tudo em uma única ferramenta.</p>
+    <div class="section">
+        <div class="container w-container">
+            <div class="w-row">
+                <div class="text-column-left column-3 w-col w-col-6">
+                    <div class="section-title-wrapper full info"></div>
+                    <h2 class="section-title">Nossa Missão</h2>
+                    <p>Inovação e Simplicidade para a Gestão Eficiente de Negócios</p>
+                    <p>Facilitar a gestão de negócios, oferecendo soluções inovadoras que integram processos, otimizam
+                        operações e impulsionam o crescimento, tudo em uma única ferramenta.</p>
+                </div>
+                <div class="image-column-right w-col w-col-6">
+                    <div class="image-block"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -75,7 +122,7 @@
                         de forma autêntica, enquanto atinge os objetivos de conversão que você quer.</p>
                 </div>
                 <div class="image-column-right w-col w-col-6">
-                    <div class="image-block-right"></div>
+                    <div class="image-block-top"></div>
                 </div>
             </div>
             <div class="top-line-block">
@@ -104,15 +151,16 @@
             </div>
         </div>
     </div>
-    <div class="simple-footer">
+    <div class="simple-footer"></div>
         <div class="container w-container">
             <div class="footer-row w-row">
                 <div class="footer-logo-column-left w-col w-col-3"><img
                         src="https://cdn.prod.website-files.com/66f1713280025d615d9b39d4/66f22883a25b0bca5e46b838_logo_ecomanda_negativo.png"
                         loading="lazy" width="132" alt="" /></div>
-                <div class="footer-menu-column w-col w-col-6"><a href="/" class="footer-inline-link">Home</a><a
-                        href="/about/sobre" aria-current="page" class="footer-inline-link w--current">sobre</a><a
-                        href="/pricing/precos" class="footer-inline-link">preço</a><a href="/contact/contato"
+                <div class="footer-menu-column w-col w-col-6"><a href="/" aria-current="page"
+                        class="footer-inline-link w--current">Home</a><a href="./sobre.html"
+                        class="footer-inline-link">sobre</a><a href="./preços.html"
+                        class="footer-inline-link">preço</a><a href="./contato.html"
                         class="footer-inline-link">contato</a></div>
                 <div class="footer-social-col-right w-col w-col-3"><a
                         href="https://www.instagram.com/comanda_eletronica/" target="_blank"
