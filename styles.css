@@ -10357,5 +10357,21 @@ html {
     background-color: #1faeffe6; /* Cor ao passar o mouse */
 }
 
+.back-to-top svg {
+  width: 30px; /* Ajuste o tamanho do ícone */
+  height: auto; /* Mantém a proporção correta */
+}
+
+@media only screen and (max-width: 600px) {
+  .back-to-top {
+      width: 50px; /* Tamanho do botão em telas menores */
+      height: 50px;
+  }
+
+  .back-to-top svg {
+      width: 25px; /* Tamanho do ícone em telas menores */
+      height: auto;
+  }
+}
 
   
