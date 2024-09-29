@@ -5093,6 +5093,7 @@
             menu.classList.toggle('open');
         });
 
+        // Formulário
         const form = document.getElementById('wf-form-Email-Form');
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o comportamento padrão de recarregar ou redirecionar automaticamente
@@ -5137,6 +5138,34 @@
             console.error("Formulário não encontrado.");
         }
     });
+
+    // Botão de voltar pra o topo
+    window.onscroll = function() {
+      toggleButton();
+  };
+  
+  document.getElementById("backToTop").addEventListener("click", scrollToTop);
+  
+  function toggleButton() {
+      const button = document.getElementById("backToTop");
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          button.classList.add("show");
+      } else {
+          button.classList.remove("show");
+      }
+  }
+  
+  function scrollToTop() {
+      console.log("Botão clicado, rolando para o topo...");
+      window.scrollTo({
+          top: 0, 
+          behavior: 'smooth'
+      });
+  }
+  
+  
+  
+  
     
       
           return api;
