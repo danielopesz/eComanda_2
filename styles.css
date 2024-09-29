@@ -10348,13 +10348,6 @@ html {
     transition: opacity 0.5s ease, visibility 0.5s ease; /* Transição suave */
 }
 
-.back-to-top img {
-  width: 50%;
-  height: 50%;
-  border-radius: 30%;
-}
-
-
 .back-to-top.show {
     opacity: 1; /* Totalmente visível */
     visibility: visible; /* Visível após a transição */
